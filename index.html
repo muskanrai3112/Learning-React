@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css"/>
+    <title>React</title>
+</head>
+  
+
+
+  <body>
+    hello this is me above! 
+    <!-- but this will not replace this will work-->
+    <div id="root">
+        <h1>hello this is me!!</h1> 
+        <!-- this will replaced by the root.render-->
+    </div>
+
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
+
+<!-- Note:-
+    -order of files is very important 
+
+    -what is the where our stuff is rendering 
+    
+    -React can used in big files as well as small portion like header, footer -->
