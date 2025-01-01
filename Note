@@ -1,0 +1,4 @@
+1. package.json is the configuration for npm
+configuration:- group of things that are arranged together.
+
+2. when we do create react app behind the scene it uses bundler!(web pack and babel)
