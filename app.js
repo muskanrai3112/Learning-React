@@ -1,46 +1,44 @@
-{
-  /* <div id="parent">
-    <div id="child1">
-        <h1>I am an h1 tag</h1>
-    </div>
-     <div id="child2">
-        <h1>I am an h1 tag</h1>
-    </div>
-</div>
+import React, { Component } from "react";
+import ReactDOM from "react-dom/client";
+import { jsx } from "react/jsx-runtime";
 
-if there will be multiple children (sibling) then we have to put it into array if only one child you can pass it without any array*/
-}
+// React element is equivalent to domElement
 
-// ReactElement(is Object) => Html Browser Understands
+// jsx:- jsx is not html it is html or html like syntax
 
-// const heading = React.createElement("h1", {id:"heading"}, "Hello this is react app")
-// console.log("heading", heading) //object
-// note: - we can give attribute in the Object like id or class
+// jsx(transpiled before it reaches to js engine) this is done by Parcel(but it is a manager)-babel it is done by
 
-// const root = ReactDOM.createRoot(document.getElementById("root"))
-// root.render(heading)
+// transpiled:- means this code is converted to the code which browser understands
 
-// nest in react
-const parent = React.createElement(
-  "div",
-  { id: "parent" },
-  [
-    React.createElement("div", { id: "child1"}, [
-        React.createElement("h1", {}, "Hello i am the h1 tag"),
-        React.createElement("h2", {}, "Hello i am the h2 tag"),
-      ] ),
-      React.createElement("div", { id: "child2" }, [
-        React.createElement("h1", {}, "Hello i am the h1 tag"),
-        React.createElement("h2", {}, "Hello i am the h2 tag"),
-      ] )
-  ]
-);
-console.log(parent, "parent");
+// React.createElement => object =>  Html(render)
+// jsx=>React.createElement => object =>  Html(render) [Babel is converting it to the jsx to react.create element]
+
+// React Element
+const ElementHeading = <h1 className="head">Hello react using jsx 🚀</h1>;
+console.log(ElementHeading, "ElementHeading");
+
+// what is react component?
+// 1.Functional component
+// 2.class component.
+// What is react fuctional component?
+// - nothing but a normal javascript function which returns some piece of jsx.
+
+const HeaderComponent = () => {
+  return (
+ <>
+    <h1>Hello i am functional component</h1>
+    <Title/>
+ </>
+  )
+ 
+};
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(parent);
+root.render(<HeaderComponent/>);
 
-// 1.what is the most expensive thing is browser
-// ANS:- when the putting some nod in dom or removing some dom in browser is the most expensive thing
+// ---------------------------------#-------------------------
+// Functional Component
 
-// 2.what is React Element?
-// ANS:- React Element is nothing but normal java script Element
+const Title = () => {
+  return <h1>Hello this is title component</h1>;
+};
