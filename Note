@@ -14,7 +14,7 @@ configuration:- group of things that are arranged together.
 
 6. It is important to put package and package.lock.json to github
 
-7. command - npx parcel index.html (this will create server for us)
+7. command - npx parcel index.html (this will create server for us)   
 
 8. we should not use cdn link for react app because it will costly 
 
@@ -35,3 +35,11 @@ configuration:- group of things that are arranged together.
 
 16. What is component composition?
 Ans- component inside the component!
+
+
+17. javascript prevents cross site scripting attack!(our data is safe with us)
+
+
+18. Props are arguments to a function
+
+19. Config driven Ui- means it will change the Ui respectively

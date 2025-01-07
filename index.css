@@ -1,8 +1,120 @@
-#child {
-  color: rgb(255, 123, 0);
-  text-decoration: underline;
-  font-size: 20px;
-  font-weight: 700;
-  font-family: Georgia, "Times New Roman", Times, serif;
+/* common css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.food-app {
+  padding: 15px;
+}
+
+.logo-container {
+  height: 100px;
+  width: 100px;
+  border-radius: 8px;
+}
+
+.logo {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+  border: 1px solid #000;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.nav-items ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-items ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 28px;
+}
+
+
+
+.res-image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.search {
+  margin-top: 15px;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 30px;
+  font-family: cursive;
+  border: 1px solid #000;
+  width: 300px;
+  padding: 8px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  color: #000;
+}
+
+.res-card-single {
+  padding: 10px;
+  background: #f0f0f0;
+  border-radius: 8px;
+  transition: all 0.5s;
+  height: 100%;
+  width: 100%;
+}
+
+.res-card-single:hover {
+  box-shadow: 0px 0px 5px 2px rgb(255 165 0 / 0.55);;
+  cursor: pointer;
+}
+
+.res-card-single h3 {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 28px;
+  color: #000;
+}
+
+.star-rating {
+  background: green;
+  padding: 5px;
+  color: white;
+  width: 72px;
+  border-radius: 8px;
+}
+
+.res-card-single h4 {
+  font-size: 17px;
+  font-weight: 500;
+  margin-top: 5px;
+  font-style: italic;
+}
+
+.res-container {
+  max-width: 1400px;
   margin: 0 auto;
+}
+
+.res-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 50px;
+  margin-top: 30px;
+}
+.res-img{
+  height: 250px;
 }
