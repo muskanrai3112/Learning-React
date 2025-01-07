@@ -118,3 +118,17 @@
 .res-img{
   height: 250px;
 }
+.filter{
+  margin-top: 20px;
+}
+.fliter-btn{
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  background: orange;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: math;
+  cursor: pointer;
+}

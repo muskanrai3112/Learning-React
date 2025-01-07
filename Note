@@ -43,3 +43,17 @@ Ans- component inside the component!
 18. Props are arguments to a function
 
 19. Config driven Ui- means it will change the Ui respectively
+
+20. Import/Export of two types 
+named export and default export.
+
+export default component;
+import component from "path"
+
+export component
+import {componet} from "path" 
+
+21. what is hook?
+ans:- Hook is a normal javascript function prebuild which 
+
+22. whenever a state variable changes react Rerender it component
