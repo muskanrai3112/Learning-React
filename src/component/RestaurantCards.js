@@ -1,15 +1,19 @@
 
 import {CARD_IMG} from "../../utlis/constant"
 const RestaurantCard = (resData) => {
-  console.log("XXXXX", resData);
+  
+console.log(resData,"resData")
 
   return (
+    resData && resData.resData && (
+    
     <div className="res-card">
+      {console.log(resData.resData,"resDataresDataresData")}
       <div className="res-card-single">
         <div className="res-img">
           <img
             className="res-image"
-            src={CARD_IMG + resData?.resData?.info?.cloudinaryImageId}
+            src={CARD_IMG + resData.resData.imageId}
             alt="res-image"
           />
         </div>
@@ -25,6 +29,7 @@ const RestaurantCard = (resData) => {
         </div>
       </div>
     </div>
+    )
   );
 };
 

@@ -54,6 +54,13 @@ export component
 import {componet} from "path" 
 
 21. what is hook?
-ans:- Hook is a normal javascript function prebuild which 
+ans:- Hook is a normal javascript function prebuild which react give to use.
 
 22. whenever a state variable changes react Rerender it component
+
+
+23. Monolith:- when for one small thing we have to change the whole thing. or deploye the whole thing then it is known as monolith.
+
+24. Microservices:- have different sirvices which combined together form a big app.(talk to each othere depending on the use cases)
+
+25. Seperation of concern:- it follows single responsibility principle where each and every service has its own job
