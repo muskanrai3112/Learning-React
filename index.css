@@ -1,4 +1,9 @@
 /* common css */
+
+:root {
+  --border-width: 8px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -42,9 +47,15 @@
   font-size: 18px;
   font-weight: 500;
   line-height: 28px;
+  transition: all 0.5s;
 }
 
-
+.nav-items ul li a:hover {
+  color: #fff;
+  background-color: #ffa500;
+  padding: 5px 15px;
+  border-radius: 8px;
+}
 
 .res-image {
   height: 100%;
@@ -52,19 +63,14 @@
   object-fit: cover;
 }
 
-.search {
-  margin-top: 15px;
-  font-size: 24px;
-  font-weight: 500;
-  line-height: 30px;
-  font-family: cursive;
-  border: 1px solid #000;
-  width: 300px;
-  padding: 8px;
-  border-radius: 30px;
-  display: flex;
-  align-items: center;
+.search input {
+  padding: 10px;
+  font-size: 14px;
   color: #000;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #ffa500;
+  background: none;
 }
 
 .res-card-single {
@@ -78,7 +84,7 @@
 
 .res-card-single:hover {
   /* box-shadow: 0px 0px 5px 2px rgb(255 165 0 / 0.55); */
-  box-shadow: #ED5521;
+  box-shadow: #ed5521;
   cursor: pointer;
 }
 
@@ -116,13 +122,16 @@
   gap: 50px;
   margin-top: 30px;
 }
-.res-img{
+/* .res-img{
   height: 250px;
-}
-.filter{
+} */
+.filter {
   margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.fliter-btn{
+.fliter-btn {
   border: none;
   padding: 10px;
   border-radius: 8px;
@@ -133,3 +142,126 @@
   font-family: math;
   cursor: pointer;
 }
+
+.contentBody {
+  position: relative;
+}
+body,
+html {
+  margin: 0;
+  background: white;
+}
+
+#wrapper {
+  filter: contrast(40);
+  background: white;
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  z-index: 9;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  margin: -50px 0 0 -50px;
+
+  animation-duration: 8s;
+  animation-fill-mode: both;
+  animation-name: rotate-wrapper;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+#corpus {
+  background: #ff00ff;
+  filter: blur(10px);
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 80px;
+  height: 80px;
+  border-radius: 0;
+  border-radius: 50%;
+}
+
+#spinner {
+  border-radius: 50%;
+  width: 20px;
+  left: 40px;
+  bottom: 50px;
+  height: 20px;
+  position: absolute;
+  filter: blur(5px);
+
+  animation-duration: 6s;
+  animation-fill-mode: both;
+  animation-name: rotate-spinner;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+#spinner:after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 60px;
+  background: white;
+  filter: blur(5px);
+}
+
+#text {
+  position: absolute;
+  width: 100px;
+  height: 40px;
+  top: 50%;
+  left: 50%;
+  margin: 60px 0 0 -50px;
+  font-family: "Comfortaa", cursive, sans-serif;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+  z-index: 10;
+}
+
+@keyframes rotate-wrapper {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate-spinner {
+  0% {
+    transform: rotate(0deg) scale(2, 1.5) translate(0px, 25px);
+  }
+  25% {
+    transform: rotate(270deg) scale(1.5) translate(0px, 20px);
+  }
+  50% {
+    transform: rotate(540deg) scale(2) translate(5px, 15px);
+  }
+  75% {
+    transform: rotate(810deg) scale(1, 3) translate(0px, 15px);
+  }
+  100% {
+    transform: rotate(1080deg) scale(2, 1.5) translate(0px, 25px);
+  }
+}
+
+.login-btn button {
+  padding: 10px 30px;
+  border-radius: 8px;
+  background: #ffa500;
+  outline: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  font-family: monospace;
+}
+
+/* css for filter search */
+

@@ -7,9 +7,8 @@ const Body = () => {
 
   useEffect(() => {
     setTimeout(()=>{
-
       fetchData();
-    }, 2000)
+    }, 200)
   }, []);
   const fetchData = async () => {
     try {
@@ -35,14 +34,27 @@ const Body = () => {
     }
   };
 
-  if( resFilter.length===0){
-    return<span className="loader">Loading.....</span>
-  }
+  // conditional rendering.....
+//   if( resFilter.length===0){
+//     return<>
+//   <div id="wrapper">		
+//   <div id="corpus"></div>
+// 	<div id="spinner"></div>
+// </div>
+// <div id="text">&nbsp;Loading ...</div>
+//      </>
+    
+//   }
 
-  return (
+  return resFilter.length===0? <><div id="wrapper">		
+  <div id="corpus"></div>
+	<div id="spinner"></div>
+</div>
+<div id="text">&nbsp;Loading ...</div></>: (
     <div className="contentBody">
       <div className="filter">
-        <button
+    <div>
+    <button
           className="fliter-btn"
           onClick={() => {
             const filterList = resFilter.filter(
@@ -55,6 +67,13 @@ const Body = () => {
         >
           Top Rated Restaurant
         </button>
+    </div>
+    <div className="search">
+    <input type="text" placeholder="search"/>
+      <button className="fliter-btn">
+       search
+      </button>
+    </div>
       </div>
       <div className="res-container">
         <div className="res-cards">

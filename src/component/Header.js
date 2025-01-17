@@ -1,10 +1,14 @@
+import { useState } from "react";
 import logo from "../../images/food-deliveryapp-logo.png"
 
 const Header = () => {
+  // let headerBtn = "login"
+  const [headerBtn, setHeaderBtn] = useState("login")
+  console.log("headerReandering")
     return (
       <div className="header">
         <div className="logo-container">
-          <img className="logo" src={logo} alt="logo" />
+          <img className="logo" src={logo} alt="logo"/>
         </div>
         <div className="nav-items">
           <ul>
@@ -23,7 +27,16 @@ const Header = () => {
               <a href="#">cart</a>
             </li>
           </ul>
+          
         </div>
+       <div className="login-btn">
+        <button onClick={()=>{
+          headerBtn==="login"?
+          setHeaderBtn("logot")
+          :setHeaderBtn("login")
+        }}>{headerBtn}</button>
+       </div>
+      
       </div>
     );
   };
